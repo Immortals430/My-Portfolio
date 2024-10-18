@@ -30,7 +30,9 @@ export default function LeftFixedComp() {
         </a>
       </div>
       <div>
+        <a href="https://vishalkumar619430.netlify.app">
         <TbWorldWww />
+        </a>
       </div>
       <div className="line"></div>
     </aside>

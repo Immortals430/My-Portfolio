@@ -27,9 +27,11 @@ export default function Contact() {
             <IoMdMailOpen />
           </span>
           </a>
+          <a href="https://vishalkumar619430.netlify.app">
           <span>
             <TbWorldWww />
           </span>
+          </a>
         </div>
       </div>
     </section>
