@@ -25,7 +25,7 @@ export default function Experience() {
             <h3 className="heading">
               Teaching Assistant <span className="theme">@Coding Ninjas</span>
             </h3>
-            <p>Sep 2023 - August 2023</p>
+            <p>Sep 2023 - August 2024</p>
             <p>
               Remote(<i>Internship</i>)
             </p>
