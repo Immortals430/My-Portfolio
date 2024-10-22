@@ -19,10 +19,10 @@ export default function About() {
             <br />
       <div className="container">
         <div className="flex-container">
-          <div>
+          <div className="aboutme-details">
             <p>
               Hello! My name is Vishal Kumar, and I am a{" "}
-              <span>MERN stack developer.</span>
+              <span>MERN stack developer. </span>
               My interest in web development started back in 2020 when I
               explored some free programming resources on the internet. Since
               then, I have been learning various tech stacks related to web

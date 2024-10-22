@@ -150,6 +150,9 @@ nav {
 }
 
 /** about me **/
+.aboutme-details{
+  width: 70%;
+}
 
 .aboutme-img {
   max-width: 400px;
