@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'custom';
+  src: url("./assets/font/Fredoka-Medium.woff") format("woff");
+  
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: "custom";
+}
+
+section {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @apply min-h-[100dvh] flex relative;
+}
+
+
+
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+

@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.head-sec {
+  @apply items-center;
+  .container{
+    @apply mx-auto w-11/12 md:w-9/12 ;
+  }
+
+  .salutation {
+    @apply font-bold text-2xl text-red-500;
+  }
+
+  .mydetail {
+    @apply 2xl:text-8xl md:text-7xl text-5xl font-bold;
+  }
+
+  .about{
+    @apply my-5 max-w-2xl text-justify;
+  }
+
+  .check-work-btn {
+    @apply p-3 block w-fit bg-red-500 
+           text-[#1B1B1B] transition-colors duration-300 rounded-lg
+           hover:bg-red-700 font-["custom"];
+  }
+}

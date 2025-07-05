@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+.contact-sec {
+  @apply items-center bg-black text-white;
+
+  h1 {
+    @apply text-3xl font-bold mb-12;
+  }
+
+  .container {
+    @apply mx-auto w-11/12 max-w-[500px] relative
+            md:w-9/12 md:max-w-4xl bg-black;
+  }
+
+  .contact-links {
+    @apply flex flex-wrap justify-center sm:gap-10 gap-2;
+
+    a {
+      @apply sm:w-20 sm:h-20 w-16 h-16 bg-amber-600 flex justify-center items-center rounded-full;
+    }
+  }
+
+  .form-wrapper {
+    @apply flex flex-wrap mb-10;
+  }
+
+  svg {
+    @apply text-3xl;
+  }
+  form {
+    @apply flex flex-col gap-6 w-full;
+
+    input {
+      @apply w-full p-2 outline-0 border-2 border-gray-500 rounded-md;
+    }
+
+    /* eleminate background getting white problem */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: white !important; /* Change this to your text color */
+    }
+
+    textarea {
+      resize: none;
+      @apply block w-full p-2 outline-0 border-2 border-gray-500 rounded-md;
+    }
+
+    button {
+      @apply bg-amber-800 text-white  cursor-pointer rounded-md font-bold 
+              flex justify-center items-center h-[60px];
+    }
+  }
+}

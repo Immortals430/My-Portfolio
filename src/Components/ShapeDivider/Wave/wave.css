@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+.bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(118% + 1.3px);
+    height: 148px;
+    transform: rotateY(180deg);
+}
+
+.bottom-wave .shape-fill {
+    fill: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+.top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.top-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 155px;
+    transform: rotateY(180deg);
+}
+
+.top-wave .shape-fill {
+    fill: #000000;
+}
