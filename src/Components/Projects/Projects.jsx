@@ -31,7 +31,7 @@ export default function Projects() {
               <h2>{obj.projectName}</h2>
               <p className="desc">{obj.description}</p>
               <div className="techs">{obj.technologies}</div>
-              <div className="flex gap-4">
+              <div className="links-container">
                 <a href={obj.githubLink} target="blank" aria-label="github">
                   <FaGithub className="links" size={22} />
                 </a>

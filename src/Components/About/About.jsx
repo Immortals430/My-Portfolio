@@ -10,7 +10,7 @@ import { FaBootstrap } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io5";
 import { SiTailwindcss } from "react-icons/si";
-import aboutme from "../../assets/about-me.png";
+import aboutme from "../../assets/about-me.webp";
 import BottomWave from "../ShapeDivider/Wave/BottomWave";
 import "./about.css";
 
@@ -21,7 +21,7 @@ export default function About() {
         <h1>About Me</h1>
 
         <div className="mydetail">
-          <div className="sm:w-9/12 ">
+          <div className="left-sec">
             <p>
               Hello! My name is Vishal Kumar, and I am a MERN stack developer.
               My interest in web development started back in 2020 when I
@@ -40,7 +40,7 @@ export default function About() {
 
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
-          <div className="max-w-[250px] ">
+          <div className="right-sec">
             <img src={aboutme} alt="about me" />
           </div>
         </div>

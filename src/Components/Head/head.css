@@ -11,6 +11,7 @@
   }
 
   .mydetail {
+
     @apply 2xl:text-8xl md:text-7xl text-5xl font-bold;
   }
 

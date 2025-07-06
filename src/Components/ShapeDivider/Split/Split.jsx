@@ -1,5 +1,4 @@
-import React from "react";
-import "./split.css"
+import "./split.css";
 
 export default function Split() {
   return (

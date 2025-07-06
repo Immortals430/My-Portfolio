@@ -1,4 +1,3 @@
-import React from "react";
 import "./wave.css";
 
 export default function BottomWave() {

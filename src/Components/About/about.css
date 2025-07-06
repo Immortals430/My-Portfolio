@@ -12,10 +12,18 @@
   }
 
   .mydetail {
-    @apply flex gap-4 flex-col-reverse items-center sm:items-start sm:flex-row; 
+    @apply flex gap-4 flex-col-reverse items-center sm:items-start sm:flex-row;
+
+    .left-sec{
+      @apply sm:w-9/12;
+    }
 
     p {
       @apply mb-5 text-justify;
+    }
+
+    .right-sec{
+      @apply max-w-[250px] sm:max-w-[400px] 
     }
   }
 

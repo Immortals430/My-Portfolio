@@ -12,8 +12,6 @@
            md:w-9/12 md:max-w-full;
   }
 
-
-
   .project {
     @apply flex-col gap-10 items-center
            md:flex md:flex-row mb-12;
@@ -38,15 +36,15 @@
 
   .techs {
     @apply font-mono mb-2 text-gray-300;
-
-
   }
 
+  .links-container {
+    @apply flex gap-4;
+  }
 
   .project:hover .links {
     @apply animate-pulse;
   }
-
 
   .links {
     @apply cursor-pointer;

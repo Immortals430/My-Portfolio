@@ -6,8 +6,7 @@ export const fetchCollection = async (collectionName) => {
   return querySnapshot.docs.map((doc) => doc.data());
 };
 
-
-export const saveMessage = async (messageData) =>{
+export const saveMessage = async (messageData) => {
   const docRef = await addDoc(collection(db, "Messages"), messageData);
-  return docRef
-}
+  return docRef;
+};

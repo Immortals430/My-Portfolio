@@ -23,11 +23,4 @@ section {
 
 
 
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
+/* npm 

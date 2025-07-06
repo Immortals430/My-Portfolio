@@ -1,4 +1,3 @@
-import React from "react";
 import "./tilt.css"
 
 export default function TiltBottom() {

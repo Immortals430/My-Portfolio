@@ -3,10 +3,10 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import { TbWorldWww } from "react-icons/tb";
-import "./contact.css";
 import { saveMessage } from "../../firebase/services/dbServices";
 import { sendEmail } from "../../api/api";
 import { useState } from "react";
+import "./contact.css";
 
 export default function Contact({ userDetails }) {
   const [loading, setLoading] = useState(false);
