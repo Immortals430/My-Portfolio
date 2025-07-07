@@ -6,6 +6,7 @@ import { TbWorldWww } from "react-icons/tb";
 import { saveMessage } from "../../firebase/services/dbServices";
 import { sendEmail } from "../../api/api";
 import { useState } from "react";
+import { toast } from "react-toastify";
 import "./contact.css";
 
 export default function Contact({ userDetails }) {
@@ -32,6 +33,7 @@ export default function Contact({ userDetails }) {
     saveMessage(body);
     e.target.reset();
     setLoading(false);
+    toast.success("Message sent successfully")
   };
 
   return (

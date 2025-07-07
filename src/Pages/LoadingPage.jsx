@@ -12,7 +12,7 @@ export default function LoadingPage({ setLoadingPage, setUserDetails }) {
     });
   }, []);
 
-  useEffect(() => {}, []);
+
   // wait for animation to complete before setting loading page false
   const ready = () => {
     setTimeout(() => {

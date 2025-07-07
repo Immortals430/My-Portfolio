@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .right-aside-sec {
-  @apply hidden lg:flex fixed top-45 -right-40  items-center gap-4 rotate-90;
+  @apply hidden lg:flex fixed top-45 -right-40  items-center gap-4 rotate-90 z-100;
 
   .email{
     @apply transition-colors duration-300 hover:text-red-500;

@@ -1,11 +1,12 @@
 
 .split {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 10;
 }
 
 .split svg {

@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 .nav-sec {
-  @apply flex fixed w-full top-0 left-0 items-center pl-6 py-4 md:pr-16 pr-6 z-10 ;
+  @apply flex fixed w-full top-0 left-0 items-center 
+         pl-6 py-4 md:pr-16 pr-6 z-100 text-blue-600;
 
   > div {
     @apply w-1/2;
@@ -18,7 +19,8 @@
   @apply flex justify-end font-mono gap-10 font-bold items-center;
 
   > a {
-    @apply cursor-pointer transition-colors duration-300 hover:text-red-500 hidden sm:inline;
+    @apply cursor-pointer transition-colors duration-300
+         hover:text-red-500 hidden sm:inline;
   }
 
   .resume {
@@ -27,3 +29,4 @@
           hover:bg-blue-800 hover:text-white;
   }
 }
+

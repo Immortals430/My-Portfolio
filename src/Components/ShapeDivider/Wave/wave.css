@@ -2,12 +2,13 @@
 
 .bottom-wave {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    z-index: 10;
 }
 
 .bottom-wave svg {
@@ -33,11 +34,12 @@
 
 .top-wave {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 10;
 }
 
 .top-wave svg {

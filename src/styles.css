@@ -17,10 +17,13 @@ section {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  @apply min-h-[100dvh] flex relative;
+  @apply min-h-[100vh] flex relative;
+}
+
+
+section.Toastify{
+  @apply min-h-0 h-0;
 }
 
 
 
-
-/* npm 

@@ -1,22 +1,8 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import "./navbar.css";
 
-
-export default function Navbar({resumeLink}) {
-  useGSAP(() => { 
-    gsap.to(".nav-sec", {
-      y: -300,
-      scrollTrigger: {
-        trigger: ".projects-sec",
-        start: "top top",
-        scrub: true,    
-      }
-    })
-  })
-
+export default function Navbar({ resumeLink }) {
   return (
-    <nav className="nav-sec ">
+    <nav className="nav-sec">
       <div className="nav-left-sec">
         <a href="/">VK</a>
       </div>

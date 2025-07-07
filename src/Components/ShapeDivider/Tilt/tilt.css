@@ -1,11 +1,12 @@
 .tilt {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    z-index: 10;
 }
 
 .tilt svg {
