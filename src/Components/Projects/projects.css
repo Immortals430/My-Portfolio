@@ -16,8 +16,14 @@
     @apply flex-col gap-10 items-center
            md:flex md:flex-row mb-12;
 
+    > div {
+      @apply md:w-1/2;
+    }
+    .img-container {
+      @apply aspect-[4/3];
+    }
     img {
-      @apply rounded-lg md:w-1/2;
+      @apply rounded-lg w-full h-full;
     }
   }
 

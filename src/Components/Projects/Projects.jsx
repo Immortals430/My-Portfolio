@@ -20,11 +20,9 @@ export default function Projects() {
 
         {projects.map((obj, i) => (
           <div className="project" key={i}>
-            <img
-              src={obj.imageUrl}
-              alt="thumbnail"
-              className={i % 2 && "order-2"}
-            />
+            <div className={`img-container ${i % 2 && "order-2"}`}>
+              <img src={obj.imageUrl} alt="thumbnail" />
+            </div>
 
             <div>
               <p className="project-type">Major Project</p>

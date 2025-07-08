@@ -12,7 +12,6 @@ export default function LoadingPage({ setLoadingPage, setUserDetails }) {
     });
   }, []);
 
-
   // wait for animation to complete before setting loading page false
   const ready = () => {
     setTimeout(() => {
@@ -23,14 +22,13 @@ export default function LoadingPage({ setLoadingPage, setUserDetails }) {
 
   return (
     <div
-      className={`flex justify-center items-center w-[100vw] h-[100dvh]
-                bg-black flex-col gap-4 overflow-hidden duration-500
+      className={`relative w-[100vw] h-[100dvh] bg-black overflow-hidden duration-500
                 transition-colors ${animateIcon && "bg-transparent"}`}
     >
       <FaReact
         size={`${!animateIcon ? "50px" : "80%"}`}
         className={`animate-spin text-cyan-300 transition-all
-           duration-300 ${animateIcon && "opacity-0"} `}
+           duration-300 ${animateIcon && "opacity-0"} absolute top-1/2 left-1/2 -translate-1/2`}
       />
     </div>
   );

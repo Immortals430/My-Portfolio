@@ -13,8 +13,7 @@
   }
 
   .img-container {
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    @apply w-full aspect-[16/9];
   }
 
   .grid {

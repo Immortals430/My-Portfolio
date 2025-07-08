@@ -77,16 +77,16 @@ export default function Contact({ userDetails }) {
         </div>
 
         <div className="contact-links ">
-          <a href={userDetails.githubLink} target="blank">
+          <a href={userDetails.githubLink} target="blank" aria-label="github">
             <FaGithub />
           </a>
-          <a href={userDetails.linkedinLink} target="blank">
+          <a href={userDetails.linkedinLink} target="blank" aria-label="linkdin"> 
             <FaLinkedin />
           </a>
-          <a href={`mailto:${userDetails.email}`}>
+          <a href={`mailto:${userDetails.email}`} aria-label="mail">
             <IoMdMailOpen />
           </a>
-          <a href="/">
+          <a href="/" aria-label="home">
             <TbWorldWww />
           </a>
         </div>

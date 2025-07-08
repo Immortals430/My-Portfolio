@@ -23,7 +23,11 @@
     }
 
     .right-sec{
-      @apply max-w-[250px] sm:max-w-[400px] 
+      @apply max-w-[250px] sm:max-w-[400px] w-full;
+      img{
+        aspect-ratio: 5 / 4;
+        @apply w-full;
+      }
     }
   }
 
