@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+.about-sec {
+  @apply items-center bg-[#F5DF4D] pt-16 pb-32;
+
+  h1 {
+    @apply font-bold text-3xl mb-10 text-center sm:text-left;
+  }
+
+  .container {
+    @apply mx-auto w-11/12 md:w-9/12;
+  }
+
+  .mydetail {
+    @apply flex gap-4 flex-col-reverse items-center sm:items-start sm:flex-row;
+
+    .left-sec{
+      @apply sm:w-9/12;
+    }
+
+    p {
+      @apply mb-5 text-justify;
+    }
+
+    .right-sec{
+      @apply max-w-[250px] sm:max-w-[400px] w-full;
+      img{
+        aspect-ratio: 5 / 4;
+        @apply w-full;
+      }
+    }
+  }
+
+  .skills {
+    @apply flex flex-wrap gap-x-5 gap-y-1.5 font-bold justify-center sm:justify-start;
+    > div {
+      @apply flex items-center gap-1;
+    }
+
+    span {
+      @apply text-lg;
+    }
+  }
+}

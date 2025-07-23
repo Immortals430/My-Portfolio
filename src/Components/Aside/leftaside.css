@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.left-aside-sec {
+
+  @apply hidden lg:flex fixed bottom-0 left-6 flex-col justify-end items-center gap-4 z-100;
+
+  a {
+    @apply flex transition-colors duration-300 hover:text-red-500;
+  }
+
+  svg {
+
+    @apply w-6 h-6 ;
+  }
+
+  .line {
+    @apply h-36 w-0.5 border border-black bg-black;
+  }
+}

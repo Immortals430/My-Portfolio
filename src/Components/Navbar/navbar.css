@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.nav-sec {
+  @apply flex fixed w-full top-0 left-0 items-center 
+         pl-6 py-4 md:pr-16 pr-6 z-100 text-blue-600;
+
+  > div {
+    @apply w-1/2;
+  }
+}
+
+.nav-left-sec {
+  > a {
+    @apply text-4xl font-bold cursor-pointer;
+  }
+}
+
+.nav-right-sec {
+  @apply flex justify-end font-mono gap-10 font-bold items-center;
+
+  > a {
+    @apply cursor-pointer transition-colors duration-300
+         hover:text-red-500 hidden sm:inline;
+  }
+
+  .resume {
+    @apply text-white bg-blue-700 font-medium rounded-full block
+            text-sm px-5 py-2.5 text-center cursor-pointer
+          hover:bg-blue-800 hover:text-white;
+  }
+}
+
