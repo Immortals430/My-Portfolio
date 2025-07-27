@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import { TbWorldWww } from "react-icons/tb";
-import { saveMessage } from "../../firebase/services/dbServices";
 import { sendEmail } from "../../api/api";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -12,7 +11,7 @@ import "./contact.css";
 export default function Contact({ userDetails }) {
   const [loading, setLoading] = useState(false);
 
-  const sendMessage = (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
     
     if (
@@ -29,11 +28,13 @@ export default function Contact({ userDetails }) {
       message: e.target.message.value,
     };
 
-    sendEmail(body)
-    saveMessage(body);
-    e.target.reset();
+    const response = await sendEmail(body)
+    if(response.ok) {
+      toast.success("Message sent successfully")
+      e.target.reset();
+    }
+    else toast.error("Something went wrong")
     setLoading(false);
-    toast.success("Message sent successfully")
   };
 
   return (
@@ -77,13 +78,13 @@ export default function Contact({ userDetails }) {
         </div>
 
         <div className="contact-links ">
-          <a href={userDetails.githubLink} target="blank" aria-label="github">
+          <a href={userDetails.githubLink?.stringValue} target="blank" aria-label="github">
             <FaGithub />
           </a>
-          <a href={userDetails.linkedinLink} target="blank" aria-label="linkdin"> 
+          <a href={userDetails.linkedinLink?.stringValue} target="blank" aria-label="linkdin"> 
             <FaLinkedin />
           </a>
-          <a href={`mailto:${userDetails.email}`} aria-label="mail">
+          <a href={`mailto:${userDetails.email?.stringValue}`} aria-label="mail">
             <IoMdMailOpen />
           </a>
           <a href="/" aria-label="home">

@@ -24,15 +24,15 @@ export default function LeftAside({ userDetails }) {
   return (
     <>
     <aside className="left-aside-sec">
-      <a href={userDetails.githubLink} target="blank" aria-label="github">
+      <a href={userDetails.githubLink?.stringValue} target="blank" aria-label="github">
         <LuGithub />
       </a>
 
-      <a href={userDetails.linkedinLink} target="blank" aria-label="linkedin">
+      <a href={userDetails.linkedinLink?.stringValue} target="blank" aria-label="linkedin">
         <FaLinkedinIn />
       </a>
 
-      <a href={`mailto:${userDetails.email}`} aria-label="email">
+      <a href={`mailto:${userDetails.email?.stringValue}`} aria-label="email">
         <MdOutlineMail />
       </a>
 

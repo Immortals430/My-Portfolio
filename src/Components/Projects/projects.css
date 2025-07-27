@@ -48,13 +48,6 @@
     @apply flex gap-4;
   }
 
-  .project:hover .links {
-    @apply animate-pulse;
-  }
-
-  .link-heading{
-    @apply text-red-700 font-bold;
-  }
 
   .links {
     @apply cursor-pointer;

@@ -1,5 +1,6 @@
-export const sendEmail = (body) => {
-    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+export const sendEmail = async (body) => {
+  try{
+    return await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -11,5 +12,10 @@ export const sendEmail = (body) => {
         user_id: import.meta.env.VITE_USER_ID,
         template_params: body,
       }),
-    });
+    })
+  }
+  catch(err){
+    return err
+  }
+
 }

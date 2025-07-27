@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'custom';
-  src: url("./assets/font/Fredoka-Medium.woff") format("woff");
-  /* font-display: swap; */
+  src: url("/Fredoka-Medium.woff") format("woff");
+  font-display: swap;
 }
 
 html{

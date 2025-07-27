@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { FaReact } from "react-icons/fa6";
-import { fetchCollection } from "../firebase/services/dbServices";
 
 export default function LoadingPage({ setLoadingPage, setUserDetails }) {
   const [animateIcon, setAnimateIcon] = useState(false);
 
   useEffect(() => {
-    fetchCollection("User Details").then((data) => {
-      setUserDetails(data[0]);
+
+    fetch("https://firestore.googleapis.com/v1/projects/portfolio-ae186/databases/(default)/documents/User+Details") 
+    .then(res => res.json())
+    .then(data => {
+      setUserDetails(data.documents[0]["fields"])
       ready();
-    });
+    })
+    .catch(err => console.log(err))
   }, []);
 
   // wait for animation to complete before setting loading page false

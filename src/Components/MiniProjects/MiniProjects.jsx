@@ -3,15 +3,17 @@ import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import TopWave from "../ShapeDivider/Wave/TopWave";
-import { fetchCollection } from "../../firebase/services/dbServices";
 import "./miniprojects.css";
 
 export default function MiniProjects() {
   const [miniProjects, setMiniProjects] = useState([]);
 
   useEffect(() => {
-    fetchCollection("Mini Projects").then((data) => setMiniProjects(data));
-  }, []);
+  fetch("https://firestore.googleapis.com/v1/projects/portfolio-ae186/databases/(default)/documents/Mini+Projects")
+  .then(res => res.json())
+  .then(data => setMiniProjects(data.documents))
+  .catch(err => console.log(err))
+}, []);
 
   return (
     <section className="miniprojects-sec ">
@@ -20,23 +22,23 @@ export default function MiniProjects() {
         <h1>My Other Works</h1>
 
         <div className="grid">
-          {miniProjects.map((obj, i) => (
-            <div className="card" href={obj.liveLink} key={i}>
+          {miniProjects.map(({fields}, i) => (
+            <div className="card" key={i}>
               <div className="img-container">
-                <img src={obj.imageUrl} alt="thumbnail" />
+                <img src={fields.imageUrl.stringValue} alt="thumbnail" />
               </div>
 
               <div className="details">
-                <h3>{obj.projectName}</h3>
-                <p>{obj.description}</p>
+                <h3>{fields.projectName.stringValue}</h3>
+                <p>{fields.description.stringValue}</p>
 
                 <div className="links">
                   <span>Links:</span>
-                  <a href={obj.githubLink} target="blank" aria-label="github">
+                  <a href={fields.githubLink.stringValue} target="blank" >
                     <FaGithub size={22} />
                   </a>
-                  {obj.liveLink && (
-                    <a href={obj.liveLink} target="blank" aria-label="live">
+                  {fields.liveLink.stringValue && (
+                    <a href={fields.liveLink.stringValue} target="blank" >
                       <FiExternalLink size={22} />
                     </a>
                   )}

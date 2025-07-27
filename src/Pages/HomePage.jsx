@@ -1,5 +1,5 @@
 import About from "../Components/About/About";
-import Head from "../Components/Head/Head";
+import Hero from "../Components/Hero/Hero";
 import Navbar from "../Components/Navbar/Navbar";
 import LeftAside from "../Components/Aside/LeftAside";
 import RightAside from "../Components/Aside/RightAside";
@@ -11,15 +11,15 @@ import { ToastContainer } from "react-toastify";
 export default function Home({ userDetails }) {
   return (
     <>
-      <Navbar resumeLink={userDetails.resumeLink} />
-      <Head githubLink={userDetails.githubLink} />
+      <Navbar resumeLink={userDetails.resumeLink?.stringValue} />
+      <Hero githubLink={userDetails.githubLink?.stringValue} />
       <About />
       <Projects />
       <MiniProjects />
       <Contact userDetails={userDetails} />
 
       <LeftAside userDetails={userDetails} />
-      <RightAside email={userDetails.email} />
+      <RightAside email={userDetails.email?.stringValue} />
 
       <ToastContainer />
     </>

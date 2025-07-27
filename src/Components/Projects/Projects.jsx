@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
-import { fetchCollection } from "../../firebase/services/dbServices";
 import "./projects.css";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
-
+ 
   useEffect(() => {
-    fetchCollection("Major Projects").then((data) =>
-      setProjects(data.reverse())
-    );
+    fetch("https://firestore.googleapis.com/v1/projects/portfolio-ae186/databases/(default)/documents/Major+Projects")
+    .then(res => res.json())
+    .then(data => setProjects(data.documents.reverse()))
+    .catch(err => console.log(err))
   }, []);
 
   return (
@@ -18,23 +18,22 @@ export default function Projects() {
       <div className="container">
         <h1>My Projects</h1>
 
-        {projects.map((obj, i) => (
+        {projects.map(({fields}, i) => (
           <div className="project" key={i}>
             <div className={`img-container ${i % 2 && "order-2"}`}>
-              <img src={obj.imageUrl} alt="thumbnail" />
+              <img src={fields.imageUrl?.stringValue} alt="thumbnail" />
             </div>
 
             <div>
               <p className="project-type">Major Project</p>
-              <h2>{obj.projectName}</h2>
-              <p className="desc">{obj.description}</p>
-              <div className="techs">{obj.technologies}</div>
+              <h2>{fields.projectName?.stringValue}</h2>
+              <p className="desc">{fields.description?.stringValue}</p>
+              <div className="techs">{fields.technologies?.stringValue}</div>
               <div className="links-container">
-                <div className="link-heading">Links:</div>
-                <a href={obj.githubLink} target="blank" aria-label="github">
+                <a href={fields.githubLink.stringValue} target="blank" aria-label="github">
                   <FaGithub className="links" size={22} />
                 </a>
-                <a href={obj.liveLink} target="blank" aria-label="live">
+                <a href={fields.liveLink.stringValue} target="blank" aria-label="live">
                   <FiExternalLink className="links" size={22} />
                 </a>
               </div>

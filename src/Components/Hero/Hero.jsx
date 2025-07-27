@@ -1,5 +1,5 @@
 import TiltBottom from "../ShapeDivider/Tilt/TiltBottom";
-import "./head.css";
+import "./hero.css";
 
 export default function Head({githubLink}) {
   return (
